@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  {% load static %}
+    <title>概览</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+  </head>
+  <body>
+	<div id="colorlib-page" >
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+			<h1 id="colorlib-logo">安全事件检测平台</h1>
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li class="colorlib-active"><a href="http://127.0.0.1:8080/WebMonitoring/index/">概览</a></li>
+				    <br>
+<br>
+					<li><a href="http://127.0.0.1:8080/WebMonitoring/taskexcute/">任务执行</a></li>
+				    <br>
+<br>
+					<li><a href="http://127.0.0.1:8080/WebMonitoring/taskmanage/">任务管理</a></li>
+				    <br>
+<br>
+                    <li><a href="http://127.0.0.1:8080/WebMonitoring/addkeyword/">关键词添加</a></li>
+                    <br><br>
+                     <li><a href="http://127.0.0.1:8080/WebMonitoring/assetmanage/">资产管理</a></li>
+					<br><br>
+					<li><a href="http://127.0.0.1:8080/WebMonitoring/safeevent">安全事件</a></li>
+			        <br>
+				</ul>
+			</nav>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<div class="hero-wrap js-fullheight" style="background-image: url({% static 'images/bg.jpg'%});" data-stellar-background-ratio="0.5">
+                <br>
+                 <br>
+                <h1 style="font-size:30px;color:#343a40;font-weight:bold;">总体数据</h1>
+                <br>
+                <table border="3" width="100%">
+                    <tr>
+                        <th style="font-size:20px;color:#343a40;">检测网址</th>
+                        <th style="font-size:20px;color:#343a40;">危险网址</th>
+                    </tr>
+                    <tr>
+                          <td style="font-size:20px;color:#343a40;">{{Testwebsite}}</td>
+                          <td style="font-size:20px;color:#343a40;">{{Dangerouswebsites}}</td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                <h1 style="font-size:30px;color:#343a40;font-weight:bold;">资产数据</h1>
+                <br>
+                <table border="3" width="100%">
+                    <tr>
+                        <th style="font-size:20px;color:#343a40;">监管单位</th>
+                        <th style="font-size:20px;color:#343a40;">监测资产</th>
+                    </tr>
+                    <tr>
+                          <td style="font-size:20px;color:#343a40;">{{Supervisionunit}}</td>
+                          <td style="font-size:20px;color:#343a40;">{{Monitoringassets}}</td>
+                    </tr>
+                </table>
+                <br>
+                <br>
+                 <h1 style="font-size:30px;color:#343a40;font-weight:bold;">安全事件数据</h1>
+                <br>
+                <table border="3" width="100%">
+                    <tr>
+                        <th style="font-size:20px;color:#343a40;">网页篡改</th>
+                        <th style="font-size:20px;color:#343a40;">域名劫持</th>
+                        <th style="font-size:20px;color:#343a40;">暗链</th>
+                        <th style="font-size:20px;color:#343a40;">敏感信息</th>
+                    </tr>
+                    <tr>
+                          <td style="font-size:20px;color:#343a40;">{{ChangeWebpage}}</td>
+                          <td style="font-size:20px;color:#343a40;">{{domainhijacking}}</td>
+                          <td style="font-size:20px;color:#343a40;">{{Darkchain}}</td>
+                          <td style="font-size:20px;color:#343a40;">{{Sensitiveinformation}}</td>
+                    </tr>
+                </table>
+			</div>
+
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js'%}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    
+  </body>
+</html>
